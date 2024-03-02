@@ -1,5 +1,5 @@
 import React from 'react'
-import ImgPainel from '../assets/images/quebraCabeca.png'
+import ImgPainel from '../assets/images/hortifrutiAlvorada.jpg'
 import styled from 'styled-components'
 import '../App.css'
 import './painel.css'
