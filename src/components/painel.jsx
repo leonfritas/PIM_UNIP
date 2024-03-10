@@ -3,6 +3,7 @@ import ImgPainel from '../assets/images/hortifrutiAlvorada.jpg'
 import styled from 'styled-components'
 import '../App.css'
 import './painel.css'
+import SetaImg from '../assets/images/seta.png'
 
 
 export default function Painel(){
@@ -12,8 +13,9 @@ export default function Painel(){
             <DivContainer className='divContainer'>
                 <DivConteudo>
                     <H2Titulo>
-                        Bem vindo (a) ao Saúde Mental Manaus
+                        
                     </H2Titulo>
+                    
                 </DivConteudo>
                 
                 {/* <DivPainel> */}
@@ -38,13 +40,31 @@ export default function Painel(){
                 <H2Titulo>
                     Equilíbrio. Transformação. Liberdade. 
                 </H2Titulo> */}
-            </DivContainer>         
+                
+
+                
+            </DivContainer> 
+            <SetaBaixo className='setaBaixo' src={SetaImg}>
+            </SetaBaixo>        
         </Main>
     )
 }
 
 const H1 = styled.h1`
 `
+
+const SetaBaixo = styled.img`
+position: absolute;
+bottom: 150px;
+margin: auto;
+right: 50%;
+left: 50%;
+width: 50px;
+
+
+
+`
+
 
 const Main = styled.main`
 
@@ -57,6 +77,7 @@ gap: 50px;
 //padding-top: 80px;
 // background: linear-gradient(#f5f5f5, #ADD8E6);
 background: #f5f5f5;
+position: relative;
 
 `
 const DivContainer = styled.div`

@@ -1,4 +1,4 @@
-import Seta from '../assets/images/seta.png'
+import Seta from '../assets/images/setaSubir.png'
 import styled from 'styled-components'
 import { useState, useEffect } from 'react'
 import './ScrollArrow.css'

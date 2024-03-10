@@ -6,6 +6,9 @@ import car from "../assets/images/car.gif";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+
+
+
 function Login() {
   /* Não permitir que o "Email" e "Senha", fique por cima do texto e quando subir não descer,
   só descer quando o campo estiver livre. */
@@ -25,7 +28,7 @@ function Login() {
 
             <div className="wrap-input">
               <input
-                className={email !== "" ? "has-val input" : "input"}
+                className= {email !== "" ? "has-val input" : "input"}
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -44,7 +47,7 @@ function Login() {
             </div>
 
             <div className="container-login-form-btn">
-              <Link to="/home" className="login-form-btn">
+              <Link to= {email == "cliente"  && password == "123"?"/home" : "" ||  email == "administrador"  && password == "123"?"/dashboard" : ""}className="login-form-btn">
                 Login
               </Link>
             </div>

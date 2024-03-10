@@ -22,17 +22,17 @@ export default function Header(){
     
 
     return(
-        <HeaderDiv className={`${header ? 'visible' : ''}`}>
+        <HeaderDiv className={`${header ? '' : 'visible'}`}>
             <DivLogo className='divLogo'> 
                 <a href='#painel'><Img className={`${header ? 'visible' : ''}`} src={Logo2}/></a>
             </DivLogo>
             <nav className='nav'>
                 <Ul className='menu'> 
-                    <a href='#sobre'><Li className={`${header ? 'visible' : ''}`}> Sobre mim</Li></a>
-                    <a href='#servicos'><Li className={`${header ? 'visible' : ''}`}>Serviços</Li></a>
-                    <a href='#comoFunciona'><Li className={`${header ? 'visible' : ''}`}>Como funciona?</Li></a>
+                    <a href='#sobre'><Li className={`${header ? 'visible' : ''}`}> Sobre nós</Li></a>
+                    <a href='#produtos'><Li className={`${header ? 'visible' : ''}`}>Produtos</Li></a>
+                    <a href='#comoFunciona'><Li className={`${header ? 'visible' : ''}`}>Receitas e Dicas</Li></a>
                    
-                    <AContato target='_blank'  href='https://api.whatsapp.com/send?phone=5592994235646&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta.'><LiContato className={`${header ? 'visible' : ''}`}>Agende já sua consulta</LiContato></AContato>
+                    <AContato target='_blank'  href='https://api.whatsapp.com/send?phone=5592994107470&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta.'><LiContato className={`${header ? 'visible' : ''}`}>Faça seu pedido aqui</LiContato></AContato>
                 </Ul>
             </nav>
         </HeaderDiv>
@@ -105,10 +105,11 @@ const HeaderDiv = styled.header`
     opacity:1;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     background: #f5f5f5;
+    // background: #8CC84B;
     
 
     &.visible {
-        opacity: 0.6;
+        opacity: 0.2;
         background-color: #f5f5f5;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         height: 60px;

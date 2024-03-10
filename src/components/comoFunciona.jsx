@@ -2,10 +2,12 @@ import styled from 'styled-components'
 import Carousel from 'react-elastic-carousel'
 import { useState, useEffect } from 'react'
 import './comoFunciona.css'
+import './reset.css'
 
 import Img1 from '../assets/images/consulta1.jpg'
 import Img2 from '../assets/images/consulta2.jpg'
 import Img3 from '../assets/images/consulta3.jpg'
+import { Link } from "react-router-dom";
 
 
 export default function ComoFunciona(){
@@ -20,15 +22,16 @@ export default function ComoFunciona(){
     ] 
 
     const [items, setItems] = useState([
-        { id: 1, image: Img1, titulo: 'Aconselhamento Psicológico', texto: 'Aconselhamento Psicológico oferece um espaço confidencial para encontrar apoio emocional e superar desafios. Como profissional de Psicologia, estou comprometido em ajudá-lo a explorar suas emoções, promovendo autoconhecimento e bem-estar. Juntos, enfrentaremos questões como ansiedade, estresse e problemas de relacionamento, buscando uma vida mais feliz e satisfatória. Agende sua sessão e dê o primeiro passo rumo ao crescimento pessoal.' }, 
-        { id: 2, image: Img2, titulo: 'Psicoterapia Familiar', texto: 'A Psicoterapia Familiar busca melhorar a comunicação e os relacionamentos dentro da família, trabalhando com todos os membros juntos. O objetivo é resolver conflitos, identificar dinâmicas disfuncionais e fortalecer os laços afetivos, para criar um ambiente familiar mais saudável e harmonioso.'  },
-        { id: 3, image: Img3, titulo: 'Terapia de Grupo', texto: 'A Terapia de Grupo é uma abordagem terapêutica em que um psicólogo conduz sessões com um grupo de pessoas que compartilham desafios semelhantes. O objetivo é promover o autoconhecimento, desenvolver habilidades emocionais e enfrentar problemas específicos, como ansiedade, depressão e questões de relacionamento. O grupo oferece suporte mútuo e aprendizado, tornando a experiência terapêutica enriquecedora e transformadora.' }, 
-        { id: 3, image: Img3, titulo: 'Orientação Profissional', texto: 'A Orientação Profissional é um processo no campo da Psicologia que ajuda indivíduos a escolherem suas carreiras e caminhos acadêmicos. O psicólogo avalia interesses, habilidades e valores do cliente para identificar opções profissionais compatíveis com seu perfil, proporcionando clareza e informações relevantes para decisões informadas e bem-sucedidas.' },
-        { id: 3, image: Img3, titulo: 'Psicologia Organizacional', texto: 'Psicologia Organizacional é a área que estuda o comportamento humano nas organizações, visando melhorar a eficiência, produtividade e bem-estar dos funcionários. Os psicólogos organizacionais aplicam princípios psicológicos em recrutamento, treinamento, gestão de desempenho e resolução de conflitos, buscando criar um ambiente saudável que atenda às necessidades dos funcionários e dos objetivos da organização.' }
+        { id: 1, image: Img1, titulo: 'Wrap de Frango com Vegetais', texto: 'Calorias: 300-400 kcal | Proteínas: 25-30g | Gorduras: 10-15g | Carboidratos: 30-35g | Fibra: 5-8g' }, 
+        { id: 2, image: Img2, titulo: 'Salada de Frutas com Hortelã', texto: 'Calorias: 150-200 kcal | Proteínas: 1-2g | Gorduras: 0-1g | Carboidratos: 35-45g | Fibra: 4-6g | Açúcares: 25-30g'  },
+        { id: 3, image: Img3, titulo: 'Legumes Grelhados com Ervas', texto: 'Calorias: 250-300 kcal | Proteínas: 5-7g | Gorduras: 15-20g | Carboidratos: 25-30g | Fibra: 8-10g | Açúcares: 10-12g' }, 
+        // { id: 3, image: Img3, titulo: 'Orientação Profissional', texto: 'A Orientação Profissional é um processo no campo da Psicologia que ajuda indivíduos a escolherem suas carreiras e caminhos acadêmicos. O psicólogo avalia interesses, habilidades e valores do cliente para identificar opções profissionais compatíveis com seu perfil, proporcionando clareza e informações relevantes para decisões informadas e bem-sucedidas.' },
+        // { id: 3, image: Img3, titulo: 'Psicologia Organizacional', texto: 'Psicologia Organizacional é a área que estuda o comportamento humano nas organizações, visando melhorar a eficiência, produtividade e bem-estar dos funcionários. Os psicólogos organizacionais aplicam princípios psicológicos em recrutamento, treinamento, gestão de desempenho e resolução de conflitos, buscando criar um ambiente saudável que atenda às necessidades dos funcionários e dos objetivos da organização.' }
 
       ]);
 
       const [activeIndex, setActiveIndex] = useState(0);
+      const [isModalOpen, setIsModalOpen] = useState(false);
 
       const nextImage = () => {
         setActiveIndex((prevIndex) => {
@@ -38,6 +41,14 @@ export default function ComoFunciona(){
             return prevIndex + 1;
           }
         });
+      };
+
+      const openModal = () => {
+        setIsModalOpen(true);
+      };
+    
+      const closeModal = () => {
+        setIsModalOpen(false);
       };
 
       useEffect(() => {
@@ -54,61 +65,86 @@ export default function ComoFunciona(){
                 </div>
 
                 <DivImageCarosel className='carousel-wrapper'>
-                <Carousel breakPoints={breakPoints} >
-                    {items.map((item, index) => (
-                        <ItemCarousel className='containerCarousel' key={item.id} isActive={index == activeIndex}>
-                            <h2 className='tituloCarousel'>{item.titulo}</h2>
-                            <ImgCarousel className='imgCarousel' src={item.image} alt={`Item ${item.id}`} />
-                            <div className='textCarousel'>
-                              {item.texto}
-                            </div>
-                        </ItemCarousel>
-                    ))}
-                </Carousel>
+                    <Carousel breakPoints={breakPoints} >
+                        {items.map((item, index) => (
+                            <ItemCarousel className='containerCarousel' key={item.id} isActive={index == activeIndex}>
+                                <h2 className='tituloCarousel'>{item.titulo}</h2>
+                                <Link onClick={openModal}>
+                                    <ImgCarousel className='imgCarousel' src={item.image} alt={`Item ${item.id}`} />
+                                </Link>
+                                
+                                <div className='textCarousel'>
+                                  {item.texto}
+                                </div>
+                            </ItemCarousel>
+                        ))}
+                    </Carousel>
                 </DivImageCarosel>
             
 
             </DivCarrossel>
            
             <DivTexto>
-            <H2>Como funciona a consulta com o especialista?</H2>
+            <H2>Alimentação Saudável: Um Cuidado Diário com Você Mesmo</H2>
             <P>
-                Bem-vindo à sua jornada de autodescoberta e crescimento pessoal! Em uma consulta com um psicólogo, você encontrará um espaço acolhedor e seguro, onde suas preocupações e emoções serão ouvidas com profunda empatia. Com cuidado e respeito, o psicólogo irá guiá-lo rumo à clareza e bem-estar emocional.
+            Comer saudável é um ato de amor próprio, um compromisso diário que nutre não apenas o corpo, mas também a mente. Ao escolher alimentos frescos e equilibrados, estamos proporcionando ao nosso organismo os nutrientes essenciais para um funcionamento ótimo.
             </P>
             <P2>
-                Lembre-se, a consulta com o psicólogo não apenas trará alívio para o seu sofrimento, mas também abrirá as portas para uma vida mais plena, significativa e gratificante.
+            Uma dieta saudável é como um investimento no nosso bem-estar, contribuindo para a energia, vitalidade e resistência. Além de fortalecer a saúde física, escolher alimentos nutritivos promove uma relação harmoniosa com a comida, transformando o ato de se alimentar em um cuidado gentil e constante consigo mesmo. A cada refeição, estamos construindo não apenas nosso corpo, mas também um estilo de vida que celebra a vitalidade e a longevidade.
             </P2>
             </DivTexto>
+
+            {isModalOpen && (
+              <div className='Modal'>
+                <div className='ModalContent'>
+                  {/* Conteúdo do modal */}
+                  
+                  <h2>Receita</h2>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit voluptatem quas est obcaecati officiis? Eum minima temporibus, facere quam expedita, accusamus dolorem tenetur deserunt fugiat neque labore adipisci assumenda necessitatibus.</p>
+                  <button className='CloseButton' onClick={() => setIsModalOpen(false)}>X</button>
+                </div>
+              </div>
+            )}
             
         </Main>
+
+        
     )
 }
 
+const ModalContent = styled.div`
+background: black;
+width: 500px;
+height:`
+
+
 const H2 = styled.h2`
-font-size: 200%;`
+font-size: 200%;
+color: white;`
 
 
 
 const ItemCarousel = styled.div`
+border-radius: 20px;
 `
 
 const ImgCarousel = styled.img`
 width: 100%;
-height: 90%;`
+height: 90%;
+`
 const Main = styled.main`
 
 height: 100vh;
 display: flex;
 align-items: center;
 justify-content: space-around;
-background-color: #5f9ea0;
+// background-color: #5f9ea0;
 padding:50px;
 gap: 20px;
 
 `
 
 const DivImageCarosel = styled.div`
-
 
 `
 
@@ -120,13 +156,11 @@ justify-content: flex-end;
 height: 90%;
 width: 60%;
 
-
-
 `
 
 const DivTexto = styled.div`
 width: 40%;
-background-color: white;
+background-color: #5f9ea0;
 max-height: 80%;
 padding: 50px;
 border-radius: 20px;
@@ -138,10 +172,13 @@ text-align: justify;
 
 const P2 = styled.p`
 margin: 20px 0;
-font-size: 100%
+font-size: 100%;
+color: white;
 `
 
 const P = styled.p`
 margin: 20px 0;
 font-size: 100%
-text-align: justify;`
+text-align: justify;
+color: white;
+`

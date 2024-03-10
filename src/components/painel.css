@@ -4,3 +4,16 @@
     background-position: 0 -150px;
 
 }
+
+
+.setaBaixo{
+animation: updown infinite alternate ease-in-out 500ms;
+}
+@keyframes updown {
+	0% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(10px);
+	}
+}
