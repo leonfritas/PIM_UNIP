@@ -1,42 +1,30 @@
 import styled from 'styled-components'
-import ImgSobre from '../assets/images/fotolincoln.png'
 import './sobre.css'
 
 
 export default function Sobre(){
     return(
-        <Main id='sobre'> 
-            
+        <Main id='sobre'>             
             <DivConteudo>
                 <div className='textosSobre'>
                     <DivTexto>
                         <H2>Um pouco sobre nós</H2>
-
                         <P2>
                             Bem-vindo ao Hortifruti Frescura Natural, onde cultivamos a qualidade, o frescor e a saúde em cada fruta, verdura e legume que oferecemos. Nossa jornada começou há mais de duas décadas, quando um grupo de apaixonados por agricultura e alimentação saudável decidiu unir forças para criar um espaço que refletisse seus valores e visão.
                         </P2>
                         <H2>Nossa História</H2>
                         <P2>                            
                             Iniciamos nossa trajetória em uma pequena fazenda, cultivando produtos frescos com práticas agrícolas sustentáveis e respeito pela natureza. Com o tempo, o Hortifruti Frescura Natural cresceu, expandindo nossas operações para atender às crescentes demandas por alimentos frescos e de qualidade.
-                        </P2>
-                        
-                        
-                        
-                    </DivTexto>
-                    
+                        </P2>                                                                        
+                    </DivTexto>                    
                     <DivTextoo>
                     <H2>Nosso Propósito</H2>
                         <P2>                            
                             Acreditamos que uma alimentação saudável é a base para uma vida plena. Nosso propósito é proporcionar a você e sua família acesso fácil a alimentos frescos, nutritivos e saborosos. Queremos ser mais do que um hortifrúti; queremos ser seu parceiro na busca por um estilo de vida saudável e equilibrado.
                         </P2>
-                    </DivTextoo>
-              
-                </div>
-                
-                
-                
+                    </DivTextoo>              
+                </div>                            
             </DivConteudo>
-
         </Main>
     )
 }
@@ -95,15 +83,14 @@ gap: 30px;
 padding: 30px;
 font-size: 100%;
 font-weight: 500;
-
-
 `
 
 const P = styled.p`
 
 text-align: justify;
 font-weight: 300;
-color: black;`
+color: black;
+`
 
 const P2 = styled.p`
 
@@ -111,7 +98,8 @@ text-align: justify;
 font-weight: 800;
 font-size: 20px;
 font-family: cursive;
-color: #006400;`
+color: #006400;
+`
 
 const H2 = styled.h2`
 font-weight: 800;

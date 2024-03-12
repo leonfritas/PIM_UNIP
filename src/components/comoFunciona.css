@@ -49,11 +49,11 @@
     text-align: center
 }
 
-.imgCarousel:hover{
+/* .imgCarousel:hover{
     cursor: pointer;
-}
+} */
 
-/* Adicione estilos conforme necessário */
+
 .Modal {
     position: fixed;
     top: 0;

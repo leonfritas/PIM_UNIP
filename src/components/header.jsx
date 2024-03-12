@@ -2,6 +2,8 @@ import React from 'react'
 import Logo2 from '../assets/images/logo2.png'
 import styled, { keyframes} from 'styled-components'
 import { useState, useEffect } from 'react'
+
+
 export default function Header(){
 
     const [header, setHeader] = useState(false)
@@ -19,12 +21,10 @@ export default function Header(){
     }, [])
 
 
-    
-
     return(
         <HeaderDiv className={`${header ? '' : 'visible'}`}>
             <DivLogo className='divLogo'> 
-                <a href='#painel'><Img className={`${header ? 'visible' : ''}`} src={Logo2}/></a>
+                <a href='#painel'><Img className={`$`} src={Logo2}/></a>
             </DivLogo>
             <nav className='nav'>
                 <Ul className='menu'> 
@@ -50,9 +50,6 @@ padding: 10px 15px;
 background-color: #4682B4;
 border-radius: 25px;
 color: white;
-
-
-
 `
 
 const LiContato = styled.li`

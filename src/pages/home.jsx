@@ -8,6 +8,7 @@ import Contato from '../components/contato'
 import ScrollArrow from '../components/ScrollArrow'
 import Footer from '../components/footer'
 
+
 export default function Home(){
 
         return(

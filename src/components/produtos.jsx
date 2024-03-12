@@ -135,8 +135,6 @@ const Card = styled.div`
   }
 `
 
-
-
 const Main = styled.main`
 
 height: 100vh;

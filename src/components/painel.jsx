@@ -8,14 +8,11 @@ import SetaImg from '../assets/images/seta.png'
 
 export default function Painel(){
     return(
-        <Main id='painel'>
-            
+        <Main id='painel'>            
             <DivContainer className='divContainer'>
                 <DivConteudo>
-                    <H2Titulo>
-                        
-                    </H2Titulo>
-                    
+                    <H2Titulo>                        
+                    </H2Titulo>                    
                 </DivConteudo>
                 
                 {/* <DivPainel> */}
@@ -60,9 +57,6 @@ margin: auto;
 right: 50%;
 left: 50%;
 width: 50px;
-
-
-
 `
 
 

@@ -8,7 +8,7 @@ import './footer.css'
 export default function Footer(){
     return(
         <Main id='footer'> 
-            <div>
+            <div className='div'>
                 <Img src={boneco}/>
             </div>
             <div>

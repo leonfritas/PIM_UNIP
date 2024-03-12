@@ -45,6 +45,8 @@ export default function ComoFunciona(){
 
       const openModal = () => {
         setIsModalOpen(true);
+        
+        
       };
     
       const closeModal = () => {
@@ -71,11 +73,10 @@ export default function ComoFunciona(){
                                 <h2 className='tituloCarousel'>{item.titulo}</h2>
                                 <Link onClick={openModal}>
                                     <ImgCarousel className='imgCarousel' src={item.image} alt={`Item ${item.id}`} />
-                                </Link>
-                                
-                                <div className='textCarousel'>
+                                    <div className='textCarousel'>
                                   {item.texto}
                                 </div>
+                                </Link>                                                               
                             </ItemCarousel>
                         ))}
                     </Carousel>
@@ -93,18 +94,20 @@ export default function ComoFunciona(){
             Uma dieta saudável é como um investimento no nosso bem-estar, contribuindo para a energia, vitalidade e resistência. Além de fortalecer a saúde física, escolher alimentos nutritivos promove uma relação harmoniosa com a comida, transformando o ato de se alimentar em um cuidado gentil e constante consigo mesmo. A cada refeição, estamos construindo não apenas nosso corpo, mas também um estilo de vida que celebra a vitalidade e a longevidade.
             </P2>
             </DivTexto>
-
-            {isModalOpen && (
+            
+            
+            {isModalOpen  && (
               <div className='Modal'>
                 <div className='ModalContent'>
                   {/* Conteúdo do modal */}
                   
-                  <h2>Receita</h2>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit voluptatem quas est obcaecati officiis? Eum minima temporibus, facere quam expedita, accusamus dolorem tenetur deserunt fugiat neque labore adipisci assumenda necessitatibus.</p>
+                  <h2>Receita 2</h2>
+                  <p>Lorem 2 ipsum, dolor sit amet consectetur adipisicing elit. Fugit voluptatem quas est obcaecati officiis? Eum minima temporibus, facere quam expedita, accusamus dolorem tenetur deserunt fugiat neque labore adipisci assumenda necessitatibus.</p>
                   <button className='CloseButton' onClick={() => setIsModalOpen(false)}>X</button>
                 </div>
               </div>
             )}
+            
             
         </Main>
 
