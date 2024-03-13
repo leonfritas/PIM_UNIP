@@ -1,0 +1,93 @@
+
+
+.separator{
+    width: 100%;
+}
+
+
+
+.carousel-wrapper{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.rec-carousel-item:focus{
+    outline: none;
+    box-shadow: inset 0 0 1px 0px blue;
+}
+
+.textCarousel{
+    position: absolute;
+    bottom: -260px;
+    background: white;
+    padding: 20px;
+    transition: 500ms ease-in-out;
+}
+
+.textCarousel:hover{
+    display: block;    
+    bottom: 0;
+}
+
+.imgCarousel:hover~.textCarousel{   
+    bottom: 0;
+    
+}
+
+.containerCarousel{
+    position:relative;
+    /* border: 1px solid black; */
+}
+
+.tituloCarousel{
+    /* color:white; */
+    /* margin: 10px; */
+    text-align: center
+}
+
+/* .imgCarousel:hover{
+    cursor: pointer;
+} */
+
+
+.Modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ModalContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    height: 70%;
+  }
+  
+  .CloseButton {
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #ddd;
+  }
+  
+  .CloseButton:hover {
+    background-color: #ccc;
+  }
+  
+

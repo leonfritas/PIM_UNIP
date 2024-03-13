@@ -1,5 +1,5 @@
 import React from "react";
-import './App.css'
+import './components/App.css'
 import { createGlobalStyle } from 'styled-components'
 import AppRoutes from "./pages/routes";
 import roboto from '../src/assets/fonts/Roboto-Medium.ttf'

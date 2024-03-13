@@ -1,14 +1,10 @@
-import React from 'react'
-import PainelDashboard from '../components/painelDashboard'
+import React from "react";
+import App from "../components/dashboard/App";
 
-
-
-export default function Dashboard(){
-
-        return(
-            <>
-                <PainelDashboard/>            
-            </>
-
-        )
-    }
+export default function Dashboard() {
+  return (
+    <>
+      <App />
+    </>
+  );
+}
