@@ -50,19 +50,17 @@ export default function Produtos() {
 
 
     return (
-        <Main id='produtos'> 
+        <main id='produtos'> 
           <ContainerCards ref={containerRef}>
-            <Card className='card cardVisible' slideFrom='left'><Img src={produto1}/><p></p></Card>
-            <Card className='card cardVisible' slideFrom='right'><Img src={produto2}/></Card>
-            <Card className='card' slideFrom='left'><Img src={produto3}/></Card>
-            <Card className='card' slideFrom='right'><Img src={produto4}/></Card>
+            <Card className='card cardVisible' slideFrom='left'><img className='imgProduto' src={produto1}/></Card>
+            <Card className='card cardVisible' slideFrom='right'><img className='imgProduto' src={produto2}/></Card>
+            <Card className='card' slideFrom='left'><img className='imgProduto' src={produto3}/></Card>
+            <Card className='card' slideFrom='right'><img className='imgProduto' src={produto4}/></Card>
           </ContainerCards>
-        </Main>
+        </main>
     )
 }
 
-const Img = styled.img`
-width: 100%;`
 
 const ContainerCards = styled.div`
   height: 90%;
@@ -122,9 +120,10 @@ const Card = styled.div`
   width: 40%;
   height: 40%;
   opacity: 0;
+  padding: 0;
+  margin: 0;
   overflow: hidden;
   cursor: pointer;
-  border-radius: 20px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   &.cardVisible {
     animation: ${({ slideFrom }) => (slideFrom === 'left' ? slideFromLeft : slideFromRight)} 1s forwards;
@@ -135,13 +134,4 @@ const Card = styled.div`
   }
 `
 
-const Main = styled.main`
 
-height: 100vh;
-display: flex;
-align-items: center;
-justify-content: center;
-background-color: #d3dbd8;
-
-
-`
