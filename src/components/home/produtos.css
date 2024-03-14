@@ -1,7 +1,3 @@
-.card:hover{
-    transform: translateY(10px)
-}
-
 .legendaCard{
     position:absolute;
     margin: auto;

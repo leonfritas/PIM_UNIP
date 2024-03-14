@@ -23,16 +23,7 @@ function App() {
 
 
 const GlobalStyle = createGlobalStyle`
-*{
-  margin:0;
-  padding:0;
-  list-style-type: none;
-  text-decoration: none;
-  color: black;
-  
-}
-
-html{
+html {
   scroll-behavior: smooth;
 }
 
