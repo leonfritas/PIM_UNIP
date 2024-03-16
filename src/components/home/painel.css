@@ -1,7 +1,7 @@
 .divContainer{
     background: url('./img/hortifrutiAlvorada.jpg') fixed center no-repeat;
     background-size: cover;
-    background-position: 0 -150px;
+    /* background-position: 0 -150px; */
 }
 
 

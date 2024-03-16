@@ -2,24 +2,16 @@ import React from "react";
 import './components/App.css'
 import { createGlobalStyle } from 'styled-components'
 import AppRoutes from "./pages/routes";
-import roboto from '../src/assets/fonts/Roboto-Medium.ttf'
-
 
 
 function App() {
   return (
-    <div >
+    <div >     
      <GlobalStyle/>
-
-      <AppRoutes/>
-
- 
-    </div>
-      
-    
+      <AppRoutes/> 
+    </div>          
   );
 }
-
 
 
 const GlobalStyle = createGlobalStyle`

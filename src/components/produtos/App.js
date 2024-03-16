@@ -5,14 +5,16 @@ import Form from "./Form";
 import GlobalStyle from "./styleForm";
 import Grid from "./grid";
 import axios from "axios";
+import { toast, ToastContainer, POSITION } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Container = styled.div`
-  position: fixed;
+  position: absolute;
 
-  top: 60%;
+  top: 35%;
 
-  left: 55%;
+  left: 56%;
 
   transform: translate(-50%, -50%);
   width: 100%;
@@ -35,7 +37,7 @@ function App() {
   const getProducts = async () => {
 
     try {
-      const res = await axios.get('http://localhost:4000/');
+      const res = await axios.get('http://localhost:4001/');
       setProducts(res.data)
     } catch (error) {
         console.log(error)
@@ -50,9 +52,10 @@ function App() {
       <HeaderSide />
       <Container>
         <Title>Cadastro de Produtos</Title>
-        <Form />
-        <Grid products={products} />
+        <Form onEdit={onEdit} setOnEdit={setOnEdit} getProducts={getProducts}/>
+        <Grid products={products} setProducts={setProducts} setOnEdit={setOnEdit} />
       </Container>
+      <ToastContainer autoClose={3000} position="bottom-left" />
       <GlobalStyle />
     </>
   );
