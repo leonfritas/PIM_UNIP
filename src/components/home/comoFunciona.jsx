@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Carousel from 'react-elastic-carousel'
+// import Carousel from 'react-elastic-carousel'
 import { useState, useEffect } from 'react'
 
 
@@ -66,7 +66,7 @@ export default function ComoFunciona(){
                 </div>
 
                 <DivImageCarosel className='carousel-wrapper'>
-                    <Carousel breakPoints={breakPoints} >
+                    {/* <Carousel breakPoints={breakPoints} >
                         {items.map((item, index) => (
                             <ItemCarousel className='containerCarousel' key={item.id} isActive={index == activeIndex}>
                                 <h2 className='tituloCarousel'>{item.titulo}</h2>
@@ -78,7 +78,7 @@ export default function ComoFunciona(){
                                 </Link>                                                               
                             </ItemCarousel>
                         ))}
-                    </Carousel>
+                    </Carousel> */}
                 </DivImageCarosel>
             
 
