@@ -27,13 +27,13 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
       </div>
 
       <ul className="sidebar-list">
-        <li className="sidebar-list-item">
-          <a href="">
+      <li className="sidebar-list-item">
+          <Link as={Link} to="/dashboard">
             <BsGrid1X2Fill className="icon" /> Dashboard
-          </a>
+          </Link>    
         </li>
         <li className="sidebar-list-item">
-          <Link as={Link} to="/products">
+          <Link as={Link} to="/produtos">
             <BsFillArchiveFill className="icon" /> Products
           </Link>    
         </li>
