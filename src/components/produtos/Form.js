@@ -15,6 +15,10 @@ const FormContainer = styled.form`
   font-weight: bolder;
   background-color: #1d2634;
   color: black;
+  position: absolute;
+  margin: auto;
+  top: 50px;
+  text-align: center;
 `;
 
 const InputArea = styled.div`
@@ -52,7 +56,7 @@ const Form = ({ getProducts, onEdit, setOnEdit }) => {
   useEffect(() => {
     if (onEdit) {
       const product = ref.current;
-
+      
       product.nome.value = onEdit.nome;
       product.preco.value = onEdit.preco;
       product.estoque.value = onEdit.estoque;

@@ -15,10 +15,12 @@ const Table = styled.table`
   box-sizing: 0 0 5px #ccc;
   border-radius: 5px;
   max-width: 800px;
-  margin: 20px;
+  margin-top: 5px;
   word-break: break-all;
   font-weight: bolder;
   background-color: #1d2634;
+  position: absolute;
+  top: 180px;
 `;
 const Tr = styled.tr``;
 const Th = styled.tr`

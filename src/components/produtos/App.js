@@ -11,11 +11,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Container = styled.div`
   position: absolute;
-
   top: 35%;
-
   left: 56%;
-
   transform: translate(-50%, -50%);
   width: 100%;
   max-width: 800px;
@@ -29,7 +26,19 @@ const Container = styled.div`
 
 const Title = styled.h1`
   justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
 `;
+
+const Main = styled.main`
+  height: 50vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+`
+
+
 function App() {
   const [products, setProducts] = useState([]);
   const [onEdit, setOnEdit] = useState(null);
@@ -49,14 +58,20 @@ function App() {
   }, [setProducts])
   return (
     <>
+    
       <HeaderSide />
-      <Container>
-        <Title>Cadastro de Produtos</Title>
-        <Form onEdit={onEdit} setOnEdit={setOnEdit} getProducts={getProducts}/>
-        <Grid products={products} setProducts={setProducts} setOnEdit={setOnEdit} />
-      </Container>
+      
+        <Container>
+          <Main>
+            <Title>Cadastro de Produtos</Title>
+            <Form onEdit={onEdit} setOnEdit={setOnEdit} getProducts={getProducts}/>
+            <Grid products={products} setProducts={setProducts} setOnEdit={setOnEdit} />
+          </Main>
+        </Container>
+      
       <ToastContainer autoClose={3000} position="bottom-left" />
       <GlobalStyle />
+      
     </>
   );
 }
