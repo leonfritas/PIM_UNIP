@@ -7,6 +7,7 @@
     color:#3c3c3b;
     height: 30vh;
     background-color: #f9fcca;
+    margin-bottom:-25px;
 }
 
 .logoHortifruti{
@@ -27,6 +28,7 @@
     align-items: center;
     justify-content: space-around;
     gap: 20px;
+
 }
 
 .divCenter{

@@ -1,0 +1,10 @@
+#comoFunciona{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f2f2f2;
+    padding:50px;
+    gap: 20px;
+
+}

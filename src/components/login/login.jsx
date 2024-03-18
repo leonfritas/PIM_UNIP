@@ -1,19 +1,16 @@
-import React, { Children } from "react";
+import React from "react";
 import "./login.css";
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import img from "./img/img.gif";
 import car from "./img/car.gif";
 import {LoginContext} from '../../context/LoginContext'
 
 
-
-
-export default function Login({children}) {
+export default function Login() {
 
   const [password, setPassword] = useState("");
   const { email, setEmail } = useContext(LoginContext)
-  const [ ativoAdm, setAtivoAdm ] = useState(false);
   const navigate = useNavigate();
 
 
@@ -27,11 +24,10 @@ export default function Login({children}) {
         setPassword('')
         alert('Usuário ou senha não encontrados.')
       }
-    }    
-    
+    }        
   }
- 
-    
+
+
   /* INCIO DO CONTAINER DE LOGIN */
   return (
     
@@ -69,7 +65,8 @@ export default function Login({children}) {
               </div>
 
               <div className="container-login-form-btn">
-                <Link onClick={logar} className="login-form-btn">
+                <Link to={email === 'administrador' && password === '123'? '/dashboard': '' ||
+                          email === 'cliente'       && password === '123'? '/home'     : '' } className="login-form-btn">
                   Login
                 </Link>              
               </div>
