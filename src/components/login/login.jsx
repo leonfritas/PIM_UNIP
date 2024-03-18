@@ -1,7 +1,7 @@
 import React, { Children } from "react";
 import "./login.css";
-import { useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect, useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import img from "./img/img.gif";
 import car from "./img/car.gif";
 import {LoginContext} from '../../context/LoginContext'
@@ -13,14 +13,23 @@ export default function Login({children}) {
 
   const [password, setPassword] = useState("");
   const { email, setEmail } = useContext(LoginContext)
+  const [ ativoAdm, setAtivoAdm ] = useState(false);
+  const navigate = useNavigate();
 
-  // const logar = (e) => {
-  //   e.preventDefault()
-  //   if(e.key === 'Enter'){
-  //     console.log('você clicou no enter')
 
-  //   }
-  // }
+  const logar = (e) => {
+    if(e.key === 'Enter'){ 
+      if(email === "cliente"  && password === "123"){
+         navigate('./home')      
+      }else if (email === "administrador"  && password === "123"){
+        navigate('./dashboard')    
+      }else{
+        setPassword('')
+        alert('Usuário ou senha não encontrados.')
+      }
+    }    
+    
+  }
  
     
   /* INCIO DO CONTAINER DE LOGIN */
@@ -42,6 +51,8 @@ export default function Login({children}) {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  autoComplete="off"
+                  onKeyPress={logar} 
                 />
                 <span className="focus-input" data-placeholder="Email"></span>
               </div>
@@ -51,14 +62,14 @@ export default function Login({children}) {
                   className={password !== "" ? "has-val input" : "input"}
                   type="password"
                   value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  // onKeyPress={logar}
+                  onChange={(e) => setPassword(e.target.value)}   
+                  onKeyPress={logar}               
                 />
                 <span className="focus-input" data-placeholder="Password"></span>
               </div>
 
               <div className="container-login-form-btn">
-                <Link   to= {email === "cliente"  && password === "123"?"/home" : "" ||  email === "administrador"  && password === "123"?"/dashboard" : ""}className="login-form-btn">
+                <Link onClick={logar} className="login-form-btn">
                   Login
                 </Link>              
               </div>
