@@ -89,9 +89,7 @@ export default function ComoFunciona(){
             <P>
             Comer saudável é um ato de amor próprio, um compromisso diário que nutre não apenas o corpo, mas também a mente. Ao escolher alimentos frescos e equilibrados, estamos proporcionando ao nosso organismo os nutrientes essenciais para um funcionamento ótimo.
             </P>
-            <P2>
-            Uma dieta saudável é como um investimento no nosso bem-estar, contribuindo para a energia, vitalidade e resistência. Além de fortalecer a saúde física, escolher alimentos nutritivos promove uma relação harmoniosa com a comida, transformando o ato de se alimentar em um cuidado gentil e constante consigo mesmo. A cada refeição, estamos construindo não apenas nosso corpo, mas também um estilo de vida que celebra a vitalidade e a longevidade.
-            </P2>
+            
             </DivTexto>
             
             
@@ -140,7 +138,7 @@ height: 100vh;
 display: flex;
 align-items: center;
 justify-content: space-around;
-// background-color: #5f9ea0;
+ background-color: #f2f2f2;
 padding:50px;
 gap: 20px;
 
