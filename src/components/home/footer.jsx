@@ -42,7 +42,7 @@ export default function Footer(){
                     </p>                    
                 </div>
                 <p>
-                    sac@hosrtifrutidosfranceses.com.br
+                    sac@hortifrutidosfranceses.com.br
                 </p>
             </div>
         </main>
