@@ -1,22 +1,17 @@
-import './header.css'
+import './css/header.css'
 import { useState, useContext } from "react";
-import { UserCircleIcon, Bars3Icon, MoonIcon} from "@heroicons/react/24/outline";
+import { UserCircleIcon, Bars3Icon, MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 import  logo  from '../home/img/logoHortiFruti.png'
 import { ThemeContext } from '../../context/ThemeContext'
 import { LoginContext } from '../../context/LoginContext'
 
 
 
-
-
-
-
-
-function Nav() {
+export default function Header() {
   const [toggleMenu, setToggleMenu] = useState(false);
-
   const { theme , toggleTheme} = useContext(ThemeContext);
   const { email } = useContext(LoginContext);
+  const [light, setLight] = useState(true)
 
   return (
     <main className='mainHeader'>    
@@ -34,19 +29,19 @@ function Nav() {
                 
               </div>
               <div className="hidden lg:flex gap-8 ">
-                <a className="linkHeader" href="/home" >
+                <a className="linkHeader" href="#painel" >
                   Home
                 </a>
                 <a className="linkHeader" href="#sobre">Sobre</a>
                 <a className="linkHeader" href="#produtos">Produtos</a>
-                <a className="linkHeader" href="#comoFunciona">Receitas</a>
+                <a className="linkHeader" href="#receitas">Receitas</a>
               </div>
             </div>
             <div className="flex gap-6">
               <div className="hidden xs:flex items-center gap-10">
                 <div className="hidden lg:flex items-center gap-2">
-                <div>
-                    <p>Olá, {email}</p>
+                  <div >
+                    <p className='saudacaoHeader'>Olá, {email}</p>
                   </div>
                   <UserCircleIcon  className="h-6 w-6" />                                                                      
                 </div>
@@ -55,7 +50,9 @@ function Nav() {
                     Faça aqui seu pedido
                   </a>
                 </div>
-                <MoonIcon onClick={toggleTheme} class="moonIcon h-6 w-6 text-gray-500" />  
+                <div className='themeIcon' onClick={() => setLight(!light)}>
+                  {light?<SunIcon onClick={toggleTheme} className="h-6 w-6 text-gray-500" />:<MoonIcon  onClick={toggleTheme} className="h-6 w-6 text-gray-500" />}
+                </div>  
               </div>          
               {/* Mobile */}
               <div className="lg:hidden flex items-center">
@@ -74,10 +71,10 @@ function Nav() {
         >
           <div className=" px-8 ">
             <div className="  flex flex-col gap-6 font-bold tracking-wider">
-              <a onClick={() => setToggleMenu(!toggleMenu)} href="/home" >Home</a>
+              <a onClick={() => setToggleMenu(!toggleMenu)} href="#painel" >Home</a>
               <a onClick={() => setToggleMenu(!toggleMenu)} href="#sobre">Sobre</a>
               <a onClick={() => setToggleMenu(!toggleMenu)} href="#produtos">Produtos</a>
-              <a onClick={() => setToggleMenu(!toggleMenu)} href="#comoFunciona">Receitas</a>
+              <a onClick={() => setToggleMenu(!toggleMenu)} href="#receitas">Receitas</a>
             </div>
           </div>
         </div>
@@ -87,7 +84,7 @@ function Nav() {
   );
 }
 
-export default Nav;
+
 
 
 

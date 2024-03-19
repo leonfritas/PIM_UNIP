@@ -1,8 +1,7 @@
 import React from 'react'
-import ImgPainel from './img/hortifrutiAlvorada.jpg'
 import styled from 'styled-components'
 import '../App.css'
-import './painel.css'
+import './css/painel.css'
 import SetaImg from './img/seta.png'
 
 

@@ -1,4 +1,8 @@
-#produtos{
+
+
+
+
+#receitas{
     height: 100vh;
     display: flex;
     align-items: center;
@@ -8,9 +12,11 @@
 
 .imgProduto{
     width: 100%;
-    /* height: 100%; */
+    height: 100%;
     /* position: center; */
-    background-size: cover;
+    /* background-size: cover; */
+    object-fit: cover;
+    padding-right: 0;
 }
 
 

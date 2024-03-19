@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import './sobre.css'
+import './css/sobre.css'
 
 
 export default function Sobre(){

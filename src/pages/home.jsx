@@ -1,25 +1,24 @@
 import React from 'react'
-import Painel from '../components/home/painel'
-import Sobre from '../components/home/sobre'
-import Receitas from '../components/home/receitas'
-import Produtos from '../components/home/produtos'
-import Nav from '../components/home/header'
+import Painel from '../components/home/Painel'
+import Sobre from '../components/home/Sobre'
+import Receitas from '../components/home/Receitas'
+import Produtos from '../components/home/Produtos'
+import Header from '../components/home/Header'
 import ScrollArrow from '../components/home/ScrollArrow'
-import Footer from '../components/home/footer'
+import Footer from '../components/home/Footer'
 
 
 export default function Home(){
 
         return(
             <>
-                <Nav/>
+                <Header/>
                 <Painel/>
                 <Sobre/>
-                <Produtos/>
-                <Receitas/>                
+                <Produtos/>  
+                <Receitas/>                                              
                 <Footer/>
                 <ScrollArrow/>
-
             </>
 
         )

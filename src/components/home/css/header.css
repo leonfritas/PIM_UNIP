@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     width: 100%;
-
 }
 
 .logoHeader{
@@ -22,7 +21,6 @@
     background-color: rgba(247, 246, 246, 0.596);    
     margin: 20px 50px;    
     border-radius: 30px;
-    
 }
 .max-w-7xl{
     margin: 0;
@@ -30,14 +28,12 @@
 
 .navHeader{
     width: 90%;
-    
 }
 
 .divHeader{
     height: 80px;
     align-items: center;
     justify-content: space-between;
-    
 }
 
 .linkHeader{
@@ -46,12 +42,12 @@
 
 .linkHeader:hover{
     color:#353535;
-    
 }
 
 .buttonHeader{
     color: black;
     cursor: pointer;
+    border: #969696 2px solid;
 }
 
 .teste{
@@ -64,13 +60,16 @@
     border-radius: 30px;
     margin: 10px;  
     color: white;
-
 }
 
-.moonIcon{
+.themeIcon{
     cursor: pointer;
     position: absolute;
     right: 40px;
+}
+
+.saudacaoHeader{
+    color: #2c2c2c;
 }
 
 @media (max-width:720px){
@@ -89,7 +88,10 @@
 }
 
 .dark-theme a{
-    background-color: #333;
+    color: white;
+}
+
+.dark-theme p{
     color: white;
 }
 
