@@ -38,7 +38,7 @@
 .titulo{
     font-weight: 800;
     font-size: 30px;
-    font-family: cursive;
+    /* font-family: cursive; */
     color: #222;
     text-align: center;
 }
@@ -47,7 +47,7 @@
     text-align: justify;
     font-weight: 500;
     font-size: 20px;
-    font-family: cursive;
+    /* font-family: cursive; */
     color: #222;
 }
 
