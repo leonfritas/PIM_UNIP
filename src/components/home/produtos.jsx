@@ -2,8 +2,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import './css/produtos.css'
 
-import receita1 from './img/produto1.jpg'
-
 
 
 export default function Produtos(){
@@ -34,10 +32,22 @@ export default function Produtos(){
 
     return(
         <main id='produtos'> 
+            <div className='divHeaderProdutos'>
+              <div  className='tituloProdutos'>
+                <h2>
+                  Sabor da Natureza em sua Mesa
+                </h2>
+                <h3>
+                  Uma seleção saudável e saborosa para sua dieta diária.
+                </h3>  
+              </div>
+              <a>
+                Realizar pedido
+              </a>
+                              
+            </div>
             <div className='divTop' >
-              {/* <div className='logo'>
-                <img src={receita1} alt="teste" />
-              </div> */}
+              
               <div className='carousel' ref={carousel}>
 
                 {data.map((item) => {  
@@ -62,12 +72,7 @@ export default function Produtos(){
               </div>
                         
             </div>           
-            <div>
-              <h2>Alimentação Saudável: Um Cuidado Diário com Você Mesmo</h2>
-              <p>
-              Comer saudável é um ato de amor próprio, um compromisso diário que nutre não apenas o corpo, mas também a mente. Ao escolher alimentos frescos e equilibrados, estamos proporcionando ao nosso organismo os nutrientes essenciais para um funcionamento ótimo.
-              </p>            
-            </div>                                          
+                                                    
         </main>        
     )
 }
