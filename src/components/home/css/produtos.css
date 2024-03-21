@@ -9,6 +9,7 @@
     padding:50px;
     gap: 20px;
 
+
 }
 
 .divTop{
@@ -17,6 +18,7 @@
     align-items: center;
     justify-content: center;
     max-width: 75vw;
+    border-bottom: 2px solid rgba(75, 74, 74, 0.753);
 }
 
 .divHeaderProdutos{
@@ -25,7 +27,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-left: 30px;
+    padding: 0 30px;
     margin-bottom: 30px;
 }
 
