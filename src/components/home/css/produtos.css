@@ -164,6 +164,21 @@
 }
 
 
+@media(max-width: 600px){
+    #produtos{
+        height: 100%;
+        padding: 50px 0;
+    }
+    .divHeaderProdutos{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+
+}
+
+
+
 
 /*
 limao  #BDD702  

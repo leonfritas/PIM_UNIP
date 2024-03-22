@@ -1,5 +1,4 @@
 #receitas{
-    
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -184,6 +183,33 @@
     font-weight: 500;
 }
 
+
+@media(max-width: 600px){
+    #receitas{
+        height: 100%;
+    }
+    .divCardsReceitas{
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+
+    .divReceita{
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .divReceitaContainer{
+        width: 100%;
+        height: 100%;
+    }
+     .inverterImg{
+        transform: translateY(-640px);
+    }
+    .inverterText{
+        transform: translateY(360px);
+    } 
+}
 /*
 limao  #BDD702  
 verde #5C8F02  

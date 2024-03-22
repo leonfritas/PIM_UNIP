@@ -110,8 +110,8 @@ export default function Receitas() {
               Sirva sobre folhas de alface ou rúcula.</p>
         </div>
       </div>
-      <div id='receitaCenter' className='divReceita receitaCenter'>
-          <div className='divReceitaContainer divTextReceita'>
+      <div id='receitaCenter' className='divReceita  receitaCenter'>
+          <div className='divReceitaContainer inverterText divTextReceita'>
             <h3>SOPA DE ABÓBORA ASSADA</h3>
             <h4>Ingredientes:</h4>
             <p>1 abóbora (aproximadamente 1,5 kg)
@@ -133,7 +133,7 @@ export default function Receitas() {
                 Sirva quente.
                 </p>
           </div> 
-          <div className='divReceitaContainer divImgReceitaCenter'>
+          <div className='divReceitaContainer inverterImg divImgReceitaCenter'>
             <img src="https://i.panelinha.com.br/i1/64-bk-4508-cp2022-12-08-0882.webp" alt="" />
           </div>           
       </div>
