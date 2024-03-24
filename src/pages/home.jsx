@@ -1,11 +1,11 @@
 import React from 'react'
-import Painel from '../components/home/Painel'
-import Sobre from '../components/home/Sobre'
-import Receitas from '../components/home/Receitas'
-import Produtos from '../components/home/Produtos'
-import Header from '../components/home/Header'
+import Painel from '../components/home/painel.jsx'
+import Sobre from '../components/home/sobre'
+import Receitas from '../components/home/receitas'
+import Produtos from '../components/home/produtos'
+import Header from '../components/home/header'
 import ScrollArrow from '../components/home/ScrollArrow'
-import Footer from '../components/home/Footer'
+import Footer from '../components/home/footer'
 
 
 export default function Home(){

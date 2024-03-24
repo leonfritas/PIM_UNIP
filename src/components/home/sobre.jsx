@@ -1,4 +1,3 @@
-import styled from 'styled-components'
 import './css/sobre.css'
 
 
@@ -24,11 +23,3 @@ export default function Sobre(){
         </main>
     )
 }
-
-
-const P = styled.p`
-text-align: justify;
-font-weight: 300;
-color: black;
-`
-

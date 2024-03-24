@@ -13,4 +13,4 @@ app.use(cors());
 
 app.use('/', produtoRoute);
 
-app.listen(4001)
+app.listen(4002)

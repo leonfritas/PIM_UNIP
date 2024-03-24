@@ -74,7 +74,7 @@ const Form = ({ getProducts, onEdit, setOnEdit }) => {
 
     if (onEdit) {
       await axios
-        .put("http://localhost:4001/" + onEdit.id, {
+        .put("http://localhost:4002/" + onEdit.id, {
           nome: product.nome.value,
           preco: product.preco.value,
           estoque: product.estoque.value,
@@ -83,7 +83,7 @@ const Form = ({ getProducts, onEdit, setOnEdit }) => {
         .catch(({ data }) => toast.error(data));
     } else {
       await axios
-        .post("http://localhost:4001", {
+        .post("http://localhost:4002/", {
           nome: product.nome.value,
           preco: product.preco.value,
           estoque: product.estoque.value,

@@ -10,7 +10,8 @@ export default function Painel(){
         <Main id='painel'>            
             <DivContainer className='divContainer'>
                 <DivConteudo>
-                    <H2Titulo>                        
+                    <H2Titulo>   
+                        {/* Hortifruti dos franceses: Sabor da Natureza em sua Mesa                      */}
                     </H2Titulo>                    
                 </DivConteudo>
                 
@@ -46,8 +47,6 @@ export default function Painel(){
     )
 }
 
-const H1 = styled.h1`
-`
 
 const SetaBaixo = styled.img`
 position: absolute;
@@ -95,35 +94,7 @@ position: relative;
 
 `
 
-const DivBoasVindas = styled.div`
 
-width: 700px;
-height: 500px;
-display: flex;
-flex-direction: column;
-
-
-
-
-`
-
-const H2BemVindo = styled.h2`
-margin-bottom: 30px;
-font-size: 40px;
-color: #191970;`
-
-const TxtBemVindo = styled.h3`
-text-align: justify;
-color: #191970;
-`
-
-const Img = styled.img`
-width: 600px;
-position: absolute;
-right: 0;
-
-
-`
 
 const DivConteudo = styled.div`
 
@@ -139,8 +110,9 @@ height: 500px;
 
 const H2Titulo = styled.h2`
 
-font-size: 70px;
+font-size: 50px;
 text-align: center;
+color: #649105;
 
 `
 

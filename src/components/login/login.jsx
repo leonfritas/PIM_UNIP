@@ -38,7 +38,7 @@ export default function Login() {
             <form className="login-form">
               <span className="login-form-title">Bem vindo!!</span>
               <span className="login-form-title">
-                <img src={img} alt="" />
+                <img className="imgLogin" src={img} alt="" />
               </span>
 
               <div className="wrap-input">

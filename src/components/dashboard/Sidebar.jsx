@@ -39,7 +39,7 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
         </li>
         <li className="sidebar-list-item">
           <a href="">
-            <BsFillGrid3X3GapFill className="icon" /> Categories
+            <BsFillGrid3X3GapFill className="icon" /> Finance
           </a>
         </li>
         <li className="sidebar-list-item">
