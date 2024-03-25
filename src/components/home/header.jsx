@@ -112,7 +112,7 @@ export default function Header() {
                   </div>
                   <div className='themeIcon ' onClick={() => setLight(!light)}>                                
                     {email === ''?
-                    <Link to='./login' >  
+                    <Link to='../' >  
                       <button className="BtnEntrar">                  
                           Entrar    
                       </button>               
