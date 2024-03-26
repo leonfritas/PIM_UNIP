@@ -34,44 +34,36 @@ export default function Header() {
 
   const navBar = document.getElementsByClassName('Header');
   const teste = document.getElementById("test");
-  let top = false
+
 
   function handleScroll(){
     const scrollY = window.pageYOffset; 
+    //
     if(scrollY > 700){
-      navBar[0].classList.add('HeaderScroll')
       setScrollTop(false)
-      top = false
+      navBar[0].classList.add('HeaderScroll')
     }else if(scrollY < 700){
-      navBar[0].classList.remove('HeaderScroll')
-      navBar[0].style = '' 
       setScrollTop(true)
-      top = true
+      navBar[0].classList.remove('HeaderScroll')
+      navBar[0].classList.remove('HeaderScrollEnter')
+      navBar[0].style = ''       
     }
-    
-    console.log(top)
-    console.log(scrollY)
 
-    if (teste && top === false && scrollY > 700){
-      teste.addEventListener('mouseenter',()=>{
+    if (teste){
+      teste.addEventListener('click',()=>{
         navBar[0].classList.remove('HeaderScroll')
         navBar[0].classList.add('HeaderScrollEnter')
-
-    })
-    }
+        }
+    )
+    }    
   
-    if (teste && top === false && scrollY > 700){
-      teste.addEventListener('mouseleave',()=>{
-        navBar[0].classList.add('HeaderScroll')
-        navBar[0].classList.remove('HeaderScrollEnter')       
-    })
-    }
+    // if (teste && scrollTop === false && scrollY > 700){
+    //   teste.addEventListener('mouseleave',()=>{
+    //     navBar[0].classList.add('HeaderScroll')
+    //     navBar[0].classList.remove('HeaderScrollEnter')       
+    // })
+    // }
   }
-
-  // console.log(scrollTop)
-
-
-
 
 
 
