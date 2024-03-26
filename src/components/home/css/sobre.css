@@ -6,6 +6,7 @@
     justify-content: center;
     align-items: center;
     padding-top: 50px;
+    /* background-color: #e4f8e0; */
 }
 
 .divConteudo{
@@ -13,32 +14,37 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #f5f5f5;
+    background-color: #c5e1a5;
     border-radius: 30px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     height: 80%;
     width: 90%;
     padding: 10px;
-    /* border: 2px solid red; */
 }
 
+
+
 .textoEsquerda{
-    height: 90%;
+    height: 100%;
     width: 40%;
-    color: white;
+    color: #222;
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 100px;
     padding: 10px;
     font-size: 100%;
     font-weight: 500;
+    justify-content: center;
+}
+
+.textoEsquerda.texto:first-child{
+    margin-bottom: 100px;
 }
 
 .titulo{
     font-weight: 800;
-    font-size: 30px;
-    /* font-family: cursive; */
+    font-size: 20px;
     color: #222;
     text-align: center;
 }
@@ -46,21 +52,21 @@
 .texto{
     text-align: justify;
     font-weight: 500;
-    font-size: 20px;
-    /* font-family: cursive; */
+    font-size: 16px;
     color: #222;
 }
 
 .textoDireita{
-    height: 90%;
+    height: 100%;
     width: 40%;
     color: white;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
     padding: 10px;
     font-size: 100%;
     font-weight: 500;
+    text-align: center;
 }
 
 .sectionSobre{
@@ -73,9 +79,20 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* gap: 10%; */
     justify-content: space-around;
+    height: 90%;
+    
+    
 }
+
+.textosSobre img{
+    width: 100%;
+
+}
+
+
+
+
 
 @media(max-width: 600px){
     #sobre{
@@ -91,3 +108,5 @@
     }
 
 }
+
+

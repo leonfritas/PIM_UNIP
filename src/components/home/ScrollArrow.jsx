@@ -28,7 +28,7 @@ const ScrollArrow = () => {
 
 const ScrollArrowContainer = styled.div`
   position: fixed;
-  bottom: 20px;
+  top: 20px;
   right: 20px;
   opacity: 0;
   visibility: hidden;
@@ -41,9 +41,9 @@ const ScrollArrowContainer = styled.div`
 `;
 
 const ImgSeta = styled.img`
-width: 100px;
+width: 50px;
 position: fixed;
 right: 10px;
-bottom: 10px;`
+top: 10px;`
 
 export default ScrollArrow;
