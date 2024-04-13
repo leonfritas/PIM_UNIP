@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import './css/receitas.css'
-import CardsReceitas from './cardsReceita'
+
 
 export default function Receitas() {
 
@@ -18,10 +18,11 @@ export default function Receitas() {
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('cardAnimation');            
-          } else {
+            // entry.target.classList.add('cardAnimation');            
+          } 
+          else {
             if (previousYRef.current > window.pageYOffset) {
-              entry.target.classList.remove('cardAnimation');
+              // entry.target.classList.remove('cardAnimation');
             }
           }
         });
@@ -44,14 +45,45 @@ export default function Receitas() {
     <main id='receitas' ref={containerRef}>
       <div className='mainCardReceitas'>
         <h2 className='tituloReceitas'>Receitas</h2>
-        <CardsReceitas />
+        <div className='divCardsReceitas'>
+          <a href="#receitaTop">
+            <div className='cardReceita'>
+              <div className='divImgCardReceitas'>
+                <img src="https://www.nacozinhadahelo.com.br/wp-content/uploads/2022/06/receita-de-salada-de-pepino-com-tomate.jpg" alt="" />
+              </div>
+              <h4 className='titleCardReceitas'>Salada de Verão</h4>
+              <p className='textCardReceitas'>Uma salada  com Tomate, Pepino e Manjericão, refrescante e colorida, perfeita para os dias quentes de verão.</p>
+            </div>
+          </a>
+          <a href="#receitaCenter">
+            <div className='cardReceita'>
+              <div className='divImgCardReceitas'>
+                <img src="https://i.panelinha.com.br/i1/64-bk-4508-cp2022-12-08-0882.webp" alt="" />
+              </div>  
+              <h4 className='titleCardReceitas'>Sopa de Abóbora Assada</h4>
+              <p className='textCardReceitas'>Uma sopa cremosa e reconfortante, feita com abóbora fresca assada e temperos aromáticos.</p>
+            </div>
+          </a>
+          <a href="#receitaBottom">
+            <div className='cardReceita'>
+              <div className='divImgCardReceitas'>
+                <img src="https://www.receiteria.com.br/wp-content/uploads/chips-assado-de-batata-doce-e-alecrim-730x548.jpeg" alt="" />
+              </div>
+              <h4 className='titleCardReceitas'>Chips de Batata Doce Assada</h4>
+              <p className='textCardReceitas'>Um petisco crocante e saudável feito com fatias finas de batata doce assadas no forno.</p>
+            </div>
+          </a>
+          
+        </div>
         <div className='divAlimentacaoSaudavelText'>
               <h2>Alimentação Saudável: Um Cuidado Diário com Você Mesmo</h2>
               <p>
-                Comer saudável é um ato de amor próprio, um compromisso diário que nutre não apenas o corpo, mas também a mente. Ao escolher alimentos frescos e equilibrados, estamos proporcionando ao nosso organismo os nutrientes essenciais para um funcionamento ótimo.
+              Comer saudável é um ato de amor próprio, um compromisso diário que nutre não apenas o corpo, mas também a mente. Ao escolher alimentos frescos e equilibrados, estamos proporcionando ao nosso organismo os nutrientes essenciais para um funcionamento ótimo.
               </p>            
         </div>  
-      </div>      
+
+      </div>
+      
       <div id='receitaTop'className='divReceita receitaTop'>
         <div className='divReceitaContainer divImgReceitaTop'>
           <img src="https://www.nacozinhadahelo.com.br/wp-content/uploads/2022/06/receita-de-salada-de-pepino-com-tomate.jpg" alt="" />
@@ -69,16 +101,14 @@ export default function Receitas() {
               Folhas de alface ou rúcula
               Coentro fresco (opcional)
               Sal e pimenta-do-reino
-              Azeite de oliva extra virgem
-          </p>
+              Azeite de oliva extra virgem</p>
               <h4>Modo de Preparo:</h4>
           <p>Corte os tomates, pepino, pimentão e cebola em pedaços pequenos.
               Combine-os em uma tigela grande com o milho e o feijão-preto.
               Adicione os cubos de abacate.
               Tempere com sal, pimenta-do-reino e coentro, se desejar.
               Regue com azeite de oliva.
-              Sirva sobre folhas de alface ou rúcula.
-          </p>
+              Sirva sobre folhas de alface ou rúcula.</p>
         </div>
       </div>
       <div id='receitaCenter' className='divReceita  receitaCenter'>
@@ -93,7 +123,7 @@ export default function Receitas() {
                 1 colher de chá de páprica defumada
                 Sal e pimenta-do-reino a gosto
                 Azeite de oliva extra virgem
-            </p>
+                </p>
                 <h4>Modo de Preparo:</h4>
             <p>Asse a abóbora no forno até ficar macia.
                 Refogue cebolas e alho em azeite.
@@ -102,7 +132,7 @@ export default function Receitas() {
                 Bata a sopa até ficar cremosa.
                 Ajuste o tempero com sal e pimenta.
                 Sirva quente.
-            </p>
+                </p>
           </div> 
           <div className='divReceitaContainer inverterImg divImgReceitaCenter'>
             <img src="https://i.panelinha.com.br/i1/64-bk-4508-cp2022-12-08-0882.webp" alt="" />
@@ -118,7 +148,7 @@ export default function Receitas() {
             <p>2 batatas-doces médias
                 2 colheres de sopa de azeite de oliva
                 Sal e temperos a gosto (pimenta, páprica, alho em pó, etc.)
-            </p>
+                </p>
                 <h4>Modo de Preparo:</h4>
             <p>Pré-aqueça o forno a 200°C e forre uma assadeira com papel manteiga.
                 Lave bem as batatas-doces e corte-as em rodelas finas, com cerca de 2-3 mm de espessura.
@@ -126,9 +156,10 @@ export default function Receitas() {
                 Disponha as rodelas de batata-doce em uma única camada sobre a assadeira preparada.
                 Asse no forno pré-aquecido por 15-20 minutos, ou até que as bordas comecem a dourar e as fatias fiquem crocantes.
                 Retire do forno e deixe esfriar por alguns minutos antes de servir.
-            </p>
+                </p>
         </div>
       </div>
+
     </main>
   )
 }

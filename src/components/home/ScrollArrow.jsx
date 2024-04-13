@@ -11,7 +11,7 @@ const ScrollArrow = () => {
     useEffect(() => {
         const handleScroll = ()=>{
             const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-            setSetaVoltar(scrollPosition > 0)
+            setSetaVoltar(scrollPosition > 800)
         }
 
         window.addEventListener('scroll', handleScroll);
@@ -41,9 +41,10 @@ const ScrollArrowContainer = styled.div`
 `;
 
 const ImgSeta = styled.img`
-width: 50px;
+width: 60px;
 position: fixed;
 right: 10px;
-top: 10px;`
+top: 10px;
+opacity: 0.5`
 
 export default ScrollArrow;

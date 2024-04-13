@@ -44,8 +44,8 @@ export default function CarouselProdutos() {
                 })}
             </div>
             <div className='buttons'>
-                <button onClick={handleLeftClick} ><img src="/static/image/setaCarousel.png" alt="Scroll Left" /></button>
-                <button onClick={handleRightClick}><img src="/static/image/setaCarousel.png" alt="Scroll Right" /></button>
+                <button className='button' onClick={handleLeftClick} ><img src="/static/image/setaCarousel.png" alt="Scroll Left" /></button>
+                <button className='button' onClick={handleRightClick}><img src="/static/image/setaCarousel.png" alt="Scroll Right" /></button>
             </div>
         </div>
     )

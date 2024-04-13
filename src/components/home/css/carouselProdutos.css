@@ -91,9 +91,15 @@
 }
 
 .buttons{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.button{
+    width: 100px;
+    display: flex;
+    justify-content: center;
 }
