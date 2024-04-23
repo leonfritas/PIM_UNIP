@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import '../App.css'
 import './css/painel.css'
 import SetaImg from './img/seta.png'
+import SteCarousel from './img/setaCarousel.png'
+
 
 
 export default function Painel(){
@@ -10,11 +12,11 @@ export default function Painel(){
     const imgPainelCarouselLista = document.getElementsByClassName('imgPainelCarousel');
     const painelButtonPrev = document.getElementsByClassName('painelButtonPrev');
     const painelButtonNext = document.getElementsByClassName('painelButtonNext');
-    const painelIconIndicador = document.getElementsByClassName('painelIconIndicador')
-    
+    const painelIconIndicador = document.getElementsByClassName('painelIconIndicador');
+
     let imagemAtual = 0;
 
-    function handleLeftClick(){  
+    function handleLeftClick(){
         console.log(imagemAtual)
         console.log(imgPainelCarouselLista.length -1)
         if(imagemAtual > 0){
@@ -56,8 +58,8 @@ export default function Painel(){
                     <img className='imgPainelCarousel' src="https://static.vecteezy.com/ti/vetor-gratis/p3/2082573-material-fundo-preto-moderno-com-folhas-de-papel-sobrepostas-em-cmyk-cores-modelo-para-o-seu-negocio-abstrato-widescreen-background-vetor.jpg" alt="" />
                     <img className='imgPainelCarousel' src="https://img.freepik.com/fotos-premium/modelo-de-plano-de-fundo-panorama-widescreen-abstrato-patterh-vermelho_7954-26466.jpg?w=1380" alt="" />
                     <img className='imgPainelCarousel' src="https://img.freepik.com/fotos-premium/modelo-de-plano-de-fundo-widescreen-de-padrao-de-arranhao-verde_7954-26543.jpg?w=1380" alt="" />
-                    <button className='painelButtonPrev' onClick={handleLeftClick} ><img src="/static/image/setaCarousel.png" alt="Scroll Left" /></button>
-                    <button className='painelButtonNext' onClick={handleRightClick}><img src="/static/image/setaCarousel.png" alt="Scroll Right" /></button>
+                    <button className='painelButtonPrev' onClick={handleLeftClick} ><img src={SteCarousel} alt="Scroll Left" /></button>
+                    <button className='painelButtonNext' onClick={handleRightClick}><img src={SteCarousel} alt="Scroll Right" /></button>
                     <button className='painelIconIndicador'>O o o o</button>
                 </div>            
             <img className='setaBaixo' src={SetaImg} alt=''/>

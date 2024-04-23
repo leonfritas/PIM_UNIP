@@ -17,9 +17,9 @@ export default function Login() {
   const logar = (e) => {
     if(e.key === 'Enter'){ 
       if(email === "cliente"  && password === "123"){
-         navigate('./home')      
+         navigate('/')      
       }else if(email === "administrador"  && password === "123"){
-        navigate('./dashboard')      
+        navigate('/dashboard')      
      }else{  
         setPassword('')
         alert('Usuário ou senha não encontrados.')
@@ -33,7 +33,7 @@ export default function Login() {
     
       <div className="container">
         <div className="container-login">
-          <img src={car} alt="carrinho de compras" />
+          <img className='imgCarrinho' src={car} alt="carrinho de compras" />
           <div className="wrap-login">
             <form className="login-form">
               <span className="login-form-title">Bem vindo!!</span>

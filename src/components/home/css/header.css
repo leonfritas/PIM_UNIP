@@ -102,7 +102,7 @@
 
 .divSaudacaoHeader{
     display: flex;
-    gap: 10px;
+    gap: 10px;    
 }
 
 .themeIcon{
@@ -196,6 +196,7 @@
     border-bottom-right-radius: 10px;
     width: 170px;
     transition: all linear 0.3s;
+    /* color: #0a0a0a; */
  }
 
    

@@ -22,6 +22,7 @@ const ScrollArrow = () => {
     return(
         <ScrollArrowContainer className={`${setaVoltar ? 'visible' : ''}`}>
             <a href='#painel'><ImgSeta src={Seta} alt="Seta para baixo" /></a>
+            {/* <a href='#painel'><img src={Seta} alt="Seta para baixo" /></a> */}
         </ScrollArrowContainer>
     )
 }
@@ -33,6 +34,7 @@ const ScrollArrowContainer = styled.div`
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+
 
   &.visible {
     opacity: 1;

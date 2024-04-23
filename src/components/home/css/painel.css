@@ -1,7 +1,7 @@
 #painel{
     background: url('../img/hortifrutiAlvorada.jpg') fixed center no-repeat;
     background-size: cover;
-    /* background-position: 0 -150px; */
+
 }
 
 
@@ -23,7 +23,7 @@ width: 50px;
 	height: 50%;
 	position: relative;
 	border-radius: 5px;
-	/* overflow: hidden; */
+	
 }
 
 .painelButtonNext img{
@@ -41,6 +41,8 @@ width: 50px;
 	top: 50%;
 	bottom: 50%;
 	width: 50px;
+	padding-right: 0;
+	
 }
 
 .imgPainelCarousel {
@@ -51,6 +53,7 @@ width: 50px;
 	border: 1px solid;
 	display:none;
 	transition: ease-in-out 1s;
+	padding-right: 0;
 }
 
 .imgPainelCarouselMostrar {

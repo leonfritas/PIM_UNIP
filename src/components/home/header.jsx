@@ -1,7 +1,7 @@
 import './css/header.css'
 import { useState, useContext } from "react";
 import { Link, useNavigate } from 'react-router-dom';
-import { UserCircleIcon, Bars3Icon, MoonIcon, SunIcon } from "@heroicons/react/24/outline";
+import { UserCircleIcon, Bars3Icon } from "@heroicons/react/24/outline";
 import  logo  from '../home/img/logoHortiFruti.png'
 import { ThemeContext } from '../../context/ThemeContext'
 import { LoginContext } from '../../context/LoginContext'
@@ -33,9 +33,7 @@ export default function Header() {
   window.addEventListener('scroll', handleScroll);
 
   const navBar = document.getElementsByClassName('Header');
-  const teste = document.getElementById("test");
-  const painelCarousel = document.getElementsByClassName('painelCarousel')
-  console.log(painelCarousel.current)
+
 
   function handleScroll(){
     const scrollY = window.pageYOffset; 
@@ -90,7 +88,7 @@ export default function Header() {
                   </div>
                   <div className='themeIcon ' onClick={() => setLight(!light)}>                                
                     {email === ''?
-                    <Link to='../' >  
+                    <Link to='/login' >  
                       <button className="BtnEntrar">                  
                           Entrar    
                       </button>               
