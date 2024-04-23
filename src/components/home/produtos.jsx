@@ -4,6 +4,18 @@ import carrinho from './img/carEdit.gif'
 import './css/finalizarPedidoCartao.css'
 import { CheckIcon, XMarkIcon, ArrowLongLeftIcon, ArrowLongRightIcon } from "@heroicons/react/24/outline";
 import { LoginContext } from '../../context/LoginContext'
+import produtoAbacaxi from './imgHortifruti/produtoAbacaxi.jpeg'
+import produtoMelancia from './imgHortifruti/produtoMelancia.jpeg'
+import produtoTomate from './imgHortifruti/produtoTomate.jpeg'
+import produtoLimao from './imgHortifruti/produtoLimao.jpeg'
+import produtoMamao from './imgHortifruti/produtoMamao.jpeg'
+import produtoBanana from './imgHortifruti/produtoBanana.jpeg'
+import produtoAbobora from './imgHortifruti/produtoAbobora.jpeg'
+import produtoMacaxeira from './imgHortifruti/produtoMacaxeira.jpeg'
+import produtoBatata from './imgHortifruti/produtoBatata.jpeg'
+import produtoAlho from './imgHortifruti/produtoAlho.jpeg'
+import produtoManga from './imgHortifruti/produtoManga.jpeg'
+import produtoLaranja from './imgHortifruti/produtoLaranja.jpeg'
 
 
 
@@ -29,50 +41,92 @@ export default function Produtos(){
       e.preventDefault();
       carousel.current.scrollLeft += carousel.current.offsetWidth;
     }
-
+  
     data = [
 
       {
           "id": "1",
-          "name": "Produto 1",
-          "image": "https://receitinhas.com.br/wp-content/uploads/2016/05/Bem-casados-Cia-de-Receitas.png",
+          "name": "Abacaxi",
+          "image": `${produtoAbacaxi}`,
           "price": "30",
           "oldPrice": "40"
       },
       {
           "id": "2",
-          "name": "Produto 2",
-          "image": "https://receitinhas.com.br/wp-content/uploads/2016/05/Bem-casados-Cia-de-Receitas.png",
+          "name": "Tomate",
+          "image": `${produtoTomate}`,
           "price": "20",
           "oldPrice": "30"
       },
       {
           "id": "3",
-          "name": "Produto 3",
-          "image": "https://receitinhas.com.br/wp-content/uploads/2016/05/Bem-casados-Cia-de-Receitas.png",
+          "name": "Limão",
+          "image": `${produtoLimao}`,
           "price": "10",
           "oldPrice": "20"
       },
       {
           "id": "4",
-          "name": "Produto 4",
-          "image": "https://receitinhas.com.br/wp-content/uploads/2016/05/Bem-casados-Cia-de-Receitas.png",
+          "name": "Mamão",
+          "image": `${produtoMamao}`,
           "price": "40",
           "oldPrice": "20"
       },
       {
           "id": "5",
-          "name": "Produto 5",
-          "image": "https://receitinhas.com.br/wp-content/uploads/2016/05/Bem-casados-Cia-de-Receitas.png",
+          "name": "Banana",
+          "image": `${produtoBanana}`,
           "price": "10",
           "oldPrice": "20"
       },
       {
           "id": "6",
-          "name": "Produto 6",
-          "image": "https://receitinhas.com.br/wp-content/uploads/2016/05/Bem-casados-Cia-de-Receitas.png",
+          "name": "Abóbora",
+          "image": `${produtoAbobora}`,
           "price": "200",
           "oldPrice": "20"
+      },
+      {
+        "id": "7",
+        "name": "Macaxeira",
+        "image": `${produtoMacaxeira}`,
+        "price": "200",
+        "oldPrice": "20"
+      },
+      {
+        "id": "8",
+        "name": "Batata",
+        "image": `${produtoBatata}`,
+        "price": "200",
+        "oldPrice": "20"
+      },
+      {
+        "id": "9",
+        "name": "Alho",
+        "image": `${produtoAlho}`,
+        "price": "200",
+        "oldPrice": "20"
+      },
+      {
+        "id": "10",
+        "name": "Manga",
+        "image": `${produtoManga}`,
+        "price": "200",
+        "oldPrice": "20"
+      },
+      {
+        "id": "11",
+        "name": "Laranja",
+        "image": `${produtoLaranja}`,
+        "price": "200",
+        "oldPrice": "20"
+      },
+      {
+        "id": "12",
+        "name": "Melancia",
+        "image": `${produtoMelancia}`,
+        "price": "200",
+        "oldPrice": "20"
       }
     ]
 

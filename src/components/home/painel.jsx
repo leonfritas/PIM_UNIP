@@ -7,6 +7,7 @@ import SteCarousel from './img/setaCarousel.png'
 
 
 
+
 export default function Painel(){
 
     const imgPainelCarouselLista = document.getElementsByClassName('imgPainelCarousel');
