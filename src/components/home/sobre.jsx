@@ -40,7 +40,7 @@ export default function Sobre(){
                         <img className="imgHortifruti"src={fotoHortifruti4} alt="" />      
                         <img className="imgHortifruti"src={fotoHortifruti5} alt="" /> 
                     </div>
-                    <h2 className='titulo'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </h2>
+                    <h2 className='titulo'>Nosso Hortifruti em Fotos</h2>
                     <div className='sobreDiv sobreDivWrap'>
                         <img className="imgHortifruti"src={fotoHortifruti6} alt="" />      
                         <img className="imgHortifruti"src={fotoHortifruti2} alt="" /> 

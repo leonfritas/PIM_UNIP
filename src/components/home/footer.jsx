@@ -25,6 +25,7 @@ export default function Footer(){
                 Nutrindo sua vida com frescor e qualidade, colhendo saúde diretamente da terra para a sua mesa. 
                 Bem-vindo ao nosso universo de sabores naturais e cores vibrantes. © Hortifruti dos Franceses - Todos os direitos reservados.
                 </p>
+                {/* <p className='direitos'>Todos os direitos reservados a ALA Sorftware Solutions v1.0</p> */}
             </div>
             <div className='divRight'>
                 <p>

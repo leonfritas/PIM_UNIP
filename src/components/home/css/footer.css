@@ -7,6 +7,7 @@
     height: 30vh;
     background-color: #012414;
     margin-bottom:-25px;
+    position: relative;
 }
 
 .logoHortifruti{
@@ -31,8 +32,19 @@
 }
 
 .divCenter{
-    width: 30%;
+    width: 30%;    
 }
+
+.direitos{
+    position: absolute;
+    bottom:0;
+    color: rgb(197, 197, 197);
+    font-weight: lighter;
+ 
+    
+}
+
+
 
 .textFooter{
     font-size: 15px;
@@ -51,6 +63,13 @@
 
 .horarioFooter{
     font-weight: 300;
+}
+.direitos p{
+    /* text-align: center; */
+    width: 100%;
+    font-size: 10px;
+    font-weight: 300;
+    
 }
 
 
