@@ -25,7 +25,7 @@ export default function Sobre(){
                           
                         <img src={fotoHortifrutiFachada} alt="" />                                                                                         
                     </div>                    
-                    <div className='sobreDiv'>
+                    <div className='sobreDiv sobreDivReverse'>
                         
                         <img src={fotoHortifruti3} alt="" />
                         <div className='textoSobre'>

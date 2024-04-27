@@ -120,6 +120,21 @@
         width: 95%;
     }
 
+    .divConteudo{
+        padding: 20px;
+    }
+    .sobreDiv{
+        flex-direction: column;
+        padding: 0;
+    }
+    .sobreDivReverse{
+        flex-direction: column-reverse;
+    }
+    .sobreDiv img{
+        width: 100%;
+        border-radius: 10px;
+    }
+
 }
 
 .tituloTeste{

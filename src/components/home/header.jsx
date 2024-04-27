@@ -51,6 +51,10 @@ export default function Header() {
     if(scrollY > 100){setToggleMenu(false)}
   }
 
+  function goToDahboard(){
+    navigate('./dashboard')
+  }
+
 
 
 
@@ -76,6 +80,7 @@ export default function Header() {
                   <a className="linkHeader" href="#sobre">Sobre</a>
                   <a className="linkHeader" href="#produtos">Produtos</a>
                   <a className="linkHeader" href="#receitas">Receitas</a>
+                  {email === 'administrador'?<a className="linkHeader" href='#' onClick={goToDahboard}>Gerenciar</a> : ''}
                 </div>
               </div>
               <div className="flex gap-6">

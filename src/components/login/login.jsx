@@ -19,7 +19,7 @@ export default function Login() {
       if(email === "cliente"  && password === "123"){
          navigate('/')      
       }else if(email === "administrador"  && password === "123"){
-        navigate('/dashboard')      
+        navigate('/')      
      }else{  
         setPassword('')
         alert('Usuário ou senha não encontrados.')

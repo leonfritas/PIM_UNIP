@@ -18,8 +18,7 @@ export default function Painel(){
     let imagemAtual = 0;
 
     function handleLeftClick(){
-        console.log(imagemAtual)
-        console.log(imgPainelCarouselLista.length -1)
+
         if(imagemAtual > 0){
             imgPainelCarouselLista[imagemAtual].classList.remove('imgPainelCarouselMostrar');
             imagemAtual--
