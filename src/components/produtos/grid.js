@@ -38,7 +38,7 @@ const Td = styled.td`
 const Grid = ({ products, setProducts, setOnEdit }) => {
    
   const handleDelete = async (id) => {
-    await axios.delete('http://localhost:4002/' + id)
+    await axios.delete('http://localhost:5000/' + id)
     .then( ( {data} ) => {
       const newArray = products.filter( (product) => product.id !== id) 
 

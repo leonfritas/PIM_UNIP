@@ -48,50 +48,50 @@ export default function Produtos(){
           "id": "1",
           "name": "Abacaxi",
           "image": `${produtoAbacaxi}`,
-          "price": "30",
-          "oldPrice": "40"
+          "price": "10",
+          "oldPrice": "15"
       },
       {
           "id": "2",
           "name": "Tomate",
           "image": `${produtoTomate}`,
-          "price": "20",
-          "oldPrice": "30"
+          "price": "5",
+          "oldPrice": "10"
       },
       {
           "id": "3",
           "name": "Limão",
           "image": `${produtoLimao}`,
-          "price": "10",
-          "oldPrice": "20"
+          "price": "5",
+          "oldPrice": "8"
       },
       {
           "id": "4",
           "name": "Mamão",
           "image": `${produtoMamao}`,
-          "price": "40",
-          "oldPrice": "20"
+          "price": "8",
+          "oldPrice": "9"
       },
       {
           "id": "5",
           "name": "Banana",
           "image": `${produtoBanana}`,
           "price": "10",
-          "oldPrice": "20"
+          "oldPrice": "12"
       },
       {
           "id": "6",
           "name": "Abóbora",
           "image": `${produtoAbobora}`,
-          "price": "200",
-          "oldPrice": "20"
+          "price": "5",
+          "oldPrice": "6"
       },
       {
         "id": "7",
         "name": "Macaxeira",
         "image": `${produtoMacaxeira}`,
-        "price": "200",
-        "oldPrice": "20"
+        "price": "8",
+        "oldPrice": "10"
       },
       {
         "id": "8",

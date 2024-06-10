@@ -46,10 +46,10 @@ function App() {
   const getProducts = async () => {
 
     try {
-      const res = await axios.get('http://localhost:4002/');
+      const res = await axios.get('http://localhost:5000/');
       setProducts(res.data)
     } catch (error) {
-        console.log(error)
+      console.log(error)
     }
   }
 

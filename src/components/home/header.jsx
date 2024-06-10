@@ -2,7 +2,7 @@ import './css/header.css'
 import { useState, useContext } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import { UserCircleIcon, Bars3Icon } from "@heroicons/react/24/outline";
-import  logo  from '../home/img/logoHortiFruti.png'
+import  logo  from '../home/img/logoHort.png'
 import { ThemeContext } from '../../context/ThemeContext'
 import { LoginContext } from '../../context/LoginContext'
 import iconWpp from '../home/img/iconWpp.png'
@@ -70,8 +70,7 @@ export default function Header() {
                     className="flex gap-1 font-bold text-gray-700 items-center ">                                        
                     <img className="logoHeader"src={logo} alt="" />
                   </a>
-                <div >
-                  
+                <div >                  
                 </div>
                 <div className="hidden lg:flex gap-8 ">
                   <a className="linkHeader" href="#painel" >
@@ -85,11 +84,9 @@ export default function Header() {
               </div>
               <div className="flex gap-6">
                 <div className="hidden xs:flex items-center gap-10">
-                  <div className="hidden lg:flex items-center gap-2">
-                                                                                        
+                  <div className="hidden lg:flex items-center gap-2">                                                                                        
                   </div>
-                  <div className='facaSeuPedido hidden lg:flex '>                
-                                  
+                  <div className='facaSeuPedido hidden lg:flex '>                                                  
                   </div>
                   <div className='themeIcon ' onClick={() => setLight(!light)}>                                
                     {email === ''?
@@ -99,22 +96,11 @@ export default function Header() {
                       </button>               
                     </Link>
                     :
-                    <div className='divSaudacaoHeader' >
-                      
-                      
+                    <div className='divSaudacaoHeader' >                                          
                       <UserCircleIcon  className="iconUser  h-6 w-6"/>  
                       {email !== ''?<p>Olá, {email}</p>:''}        
                     </div>
-                    }
-
-                    {/*
-                    // <Link onClick={refreshPage}>
-                    //   <button class=Name"BtnEntrar">                
-                    //       Sair
-                    //   </button>
-                    // </Link>*/}
-                      
-                      {/* {light?<SunIcon onClick={toggleTheme} className="h-6 w-6 text-gray-500" />:<MoonIcon  onClick={toggleTheme} className="h-6 w-6 text-gray-500" />}                    */}
+                    }                                     
                   </div>  
                 </div>          
                 {/* Mobile */}
@@ -139,6 +125,7 @@ export default function Header() {
                   <a onClick={() => setToggleMenu(!toggleMenu)} href="#sobre">Sobre</a>
                   <a onClick={() => setToggleMenu(!toggleMenu)} href="#produtos">Produtos</a>
                   <a onClick={() => setToggleMenu(!toggleMenu)} href="#receitas">Receitas</a>
+                  <a onClick={goToDahboard} href='#' >Gerenciar</a>
                   {email === '' ?<Link to='./login'> <a onClick={() => setToggleMenu(!toggleMenu)} href="#painel" >Entrar</a></Link> 
                   :  <a onClick= {refreshPage} href="#painel">Sair</a>
                   }               

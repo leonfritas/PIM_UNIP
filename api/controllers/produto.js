@@ -25,14 +25,11 @@ export const addProduto = (request, response) => {
         request.body.estoque
     ]
 
-    console.log(values)
-    console.log(request)
-
       db.query(q, [values], (err) => {
            if(err) return response.json(err)
       })
 
-      return response.status(200).json('Produto cadastrado com sucesso')
+      return response.status(200).json('Produto cadastrado com sucesso!')
 }
 
 export const updateProdutos = (request, response) => {

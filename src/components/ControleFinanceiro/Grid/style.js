@@ -8,6 +8,7 @@ export const Table = styled.table`
   border-radius: 5px;
   max-width: 1120px;
   margin: 20px auto;
+  
 `;
 
 export const Thead = styled.thead``;
@@ -22,4 +23,5 @@ export const Th = styled.th`
   padding-bottom: 5px;
   text-align: ${(props) => (props.alignCenter ? "center" : "start")};
   width: ${(props) => (props.width ? props.width + "%" : "auto")};
+  
 `;

@@ -55,8 +55,7 @@ const Form = ({ getProducts, onEdit, setOnEdit }) => {
 
   useEffect(() => {
     if (onEdit) {
-      const product = ref.current;
-      
+      const product = ref.current;      
       product.nome.value = onEdit.nome;
       product.preco.value = onEdit.preco;
       product.estoque.value = onEdit.estoque;
@@ -64,26 +63,28 @@ const Form = ({ getProducts, onEdit, setOnEdit }) => {
   }, [onEdit]);
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
-
+    event.preventDefault();  
     const product = ref.current;
 
     if (!product.nome.value || !product.preco.value || !product.estoque.value) {
       return toast.warn("Preencha todos os campos!!");
     }
 
-    if (onEdit) {
+    if (onEdit) {      
       await axios
-        .put("http://localhost:4002/" + onEdit.id, {
+
+        .put("http://localhost:5000/" + onEdit.id, {
           nome: product.nome.value,
           preco: product.preco.value,
           estoque: product.estoque.value,
+          
         })
         .then(({ data }) => toast.success(data))
         .catch(({ data }) => toast.error(data));
+     
     } else {
       await axios
-        .post("http://localhost:4002/", {
+        .post("http://localhost:5000/", {
           nome: product.nome.value,
           preco: product.preco.value,
           estoque: product.estoque.value,

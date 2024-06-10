@@ -6,7 +6,9 @@ export const Container = styled.div`
   background: #1d2634;
 `;
 
-export const HeaderStyle = styled.h1``;
+export const HeaderStyle = styled.h1`
+display:flex;
+flex-direction: row`;
 
 export const Title = styled.div`
   padding-top: 20px;

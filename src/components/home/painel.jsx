@@ -4,6 +4,7 @@ import '../App.css'
 import './css/painel.css'
 import SetaImg from './img/seta.png'
 import SteCarousel from './img/setaCarousel.png'
+import imgPromocao1 from './img/painel1.png'
 
 
 
@@ -28,10 +29,10 @@ export default function Painel(){
             imagemAtual = imgPainelCarouselLista.length -1;
             imgPainelCarouselLista[imagemAtual].classList.add('imgPainelCarouselMostrar');
         }
-        if (imagemAtual == 0){ painelIconIndicador[0].innerHTML = 'O o o o'} else
-        if (imagemAtual == 1){ painelIconIndicador[0].innerHTML = 'o O o o'} else
-        if (imagemAtual == 2){ painelIconIndicador[0].innerHTML = 'o o O o'} else 
-        if (imagemAtual == 3){ painelIconIndicador[0].innerHTML = 'o o o O'}                     
+        if (imagemAtual === 0){ painelIconIndicador[0].innerHTML = 'O o o o'} else
+        if (imagemAtual === 1){ painelIconIndicador[0].innerHTML = 'o O o o'} else
+        if (imagemAtual === 2){ painelIconIndicador[0].innerHTML = 'o o O o'} else 
+        if (imagemAtual === 3){ painelIconIndicador[0].innerHTML = 'o o o O'}                     
     }
 
     function handleRightClick(){        
@@ -54,7 +55,7 @@ export default function Painel(){
     return(
         <Main id='painel'>                        
                 <div className='painelCarousel'>
-                    <img className='imgPainelCarousel imgPainelCarouselMostrar' src="https://wallpaper-house.com/data/out/6/wallpaper2you_122644.jpg" alt="" />
+                    <img className='imgPainelCarousel imgPainelCarouselMostrar' src={imgPromocao1} alt="" />
                     <img className='imgPainelCarousel' src="https://static.vecteezy.com/ti/vetor-gratis/p3/2082573-material-fundo-preto-moderno-com-folhas-de-papel-sobrepostas-em-cmyk-cores-modelo-para-o-seu-negocio-abstrato-widescreen-background-vetor.jpg" alt="" />
                     <img className='imgPainelCarousel' src="https://img.freepik.com/fotos-premium/modelo-de-plano-de-fundo-panorama-widescreen-abstrato-patterh-vermelho_7954-26466.jpg?w=1380" alt="" />
                     <img className='imgPainelCarousel' src="https://img.freepik.com/fotos-premium/modelo-de-plano-de-fundo-widescreen-de-padrao-de-arranhao-verde_7954-26543.jpg?w=1380" alt="" />

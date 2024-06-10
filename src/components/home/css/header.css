@@ -78,7 +78,7 @@
     width: 100%;    
     border-radius: 30px;
     margin:10px;  
-    color: #222; 
+    color: #333; 
     background-color: rgba(247, 246, 246, 0);    
 } 
 
@@ -103,6 +103,7 @@
 .divSaudacaoHeader{
     display: flex;
     gap: 10px;    
+    color: #333;
 }
 
 .themeIcon{
@@ -141,13 +142,14 @@
     height: 45px;
     padding: 8px;
     border-radius: 30px;
-    border: 2.5px solid #e0e1e4;
+    border: 2.5px solid #333;
     box-shadow: 0px 0px 20px -20px;
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.411);
     transition: all 0.2s ease-in-out 0ms;
     user-select: none;
     /* font-family: 'Poppins', sans-serif; */
+    color: #333;
   }
   
   .BtnEntrar:hover {
@@ -191,12 +193,12 @@
  .dropDownList{
     margin-top: 20px;  
     padding-top: 40px;  
-    background-color: rgba(247, 246, 246, 0.384);   
+    background-color: rgb(247, 246, 246);   
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     width: 170px;
     transition: all linear 0.3s;
-    /* color: #0a0a0a; */
+    color: #333;
  }
 
    
