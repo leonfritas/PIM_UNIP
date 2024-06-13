@@ -55,6 +55,10 @@ export default function Header() {
     navigate('./dashboard')
   }
 
+  function goToFinanceiro(){
+    navigate('./financeiro')
+  }
+
 
 
 
@@ -80,6 +84,7 @@ export default function Header() {
                   <a className="linkHeader" href="#produtos">Produtos</a>
                   <a className="linkHeader" href="#receitas">Receitas</a>
                   {email === 'administrador'?<a className="linkHeader" href='#' onClick={goToDahboard}>Gerenciar</a> : ''}
+                  {email === 'administrador'?<a className="linkHeader" href='#' onClick={goToFinanceiro}>Financeiro</a> : ''}
                 </div>
               </div>
               <div className="flex gap-6">
@@ -126,6 +131,7 @@ export default function Header() {
                   <a onClick={() => setToggleMenu(!toggleMenu)} href="#produtos">Produtos</a>
                   <a onClick={() => setToggleMenu(!toggleMenu)} href="#receitas">Receitas</a>
                   <a onClick={goToDahboard} href='#' >Gerenciar</a>
+                  <a onClick={goToFinanceiro} href='#' >Financeiro</a>
                   {email === '' ?<Link to='./login'> <a onClick={() => setToggleMenu(!toggleMenu)} href="#painel" >Entrar</a></Link> 
                   :  <a onClick= {refreshPage} href="#painel">Sair</a>
                   }               
