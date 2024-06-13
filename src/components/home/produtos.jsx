@@ -97,35 +97,35 @@ export default function Produtos(){
         "id": "8",
         "name": "Batata",
         "image": `${produtoBatata}`,
-        "price": "200",
+        "price": "5",
         "oldPrice": "20"
       },
       {
         "id": "9",
         "name": "Alho",
         "image": `${produtoAlho}`,
-        "price": "200",
+        "price": "7",
         "oldPrice": "20"
       },
       {
         "id": "10",
         "name": "Manga",
         "image": `${produtoManga}`,
-        "price": "200",
+        "price": "2",
         "oldPrice": "20"
       },
       {
         "id": "11",
         "name": "Laranja",
         "image": `${produtoLaranja}`,
-        "price": "200",
+        "price": "5",
         "oldPrice": "20"
       },
       {
         "id": "12",
         "name": "Melancia",
         "image": `${produtoMelancia}`,
-        "price": "200",
+        "price": "10",
         "oldPrice": "20"
       }
     ]

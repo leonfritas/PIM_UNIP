@@ -1,5 +1,5 @@
 import './css/footer.css'
-import  logo  from '../home/img/logoHortiFruti.png'
+import  logo  from '../home/img/logoHort.png'
 import { ImFacebook2 } from "react-icons/im";
 import { TfiInstagram } from "react-icons/tfi";
 import { IoLogoYoutube } from "react-icons/io";
