@@ -4,7 +4,6 @@ import { getProdutos, addProduto, updateProdutos, deleteProduto } from '../contr
 
 const router = express.Router();
 
-
 router.get('/', getProdutos)
 
 router.post('/', addProduto)
